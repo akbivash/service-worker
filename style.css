@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 10px;
+    display: grid;
+  gap: 1rem;
+  
+}
+img {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
+
+button{
+    width: fit-content;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
+
+}
+
+button:hover{
+    background: red;
+    color: aliceblue;
+}
