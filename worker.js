@@ -9,7 +9,7 @@ self.addEventListener('install', (event) => {
   console.log('installed');
   event.waitUntil(
     addResourcesToCache([
-      // './index.html',
+      './index.html',
       './style.css',
     ])
   );
@@ -51,8 +51,6 @@ self.addEventListener('fetch', (event) => {
 
 self.addEventListener('message', async (event) => {
   if (event.data && event.data.type === 'heavy-calculation-request') {
-    // Perform your heavy calculation here
-    console.log('msg')
     self.clients.matchAll().then(clients => {
       clients.forEach(client => client.postMessage({msg: 'Hello from SW', type:'heavy-calculation-request'}));
   })
